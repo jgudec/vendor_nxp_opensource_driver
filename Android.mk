@@ -26,8 +26,3 @@ ifeq ($(TARGET_KERNEL_DLKM_DISABLE), true)
 else
   NFC_DLKM_ENABLED := true
 endif
-
-########## Build kernel module based on local DLKM flag status ##########
-ifeq ($(NFC_DLKM_ENABLED), true)
-  include $(DLKM_DIR)/Build_external_kernelmodule.mk
-endif
